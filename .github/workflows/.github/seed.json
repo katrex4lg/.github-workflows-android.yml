@@ -1,0 +1,479 @@
+{
+ "settings": {},
+ "accounts": [
+  {
+   "code": "1000",
+   "name": "Cash",
+   "type": "Asset",
+   "section": "Current assets"
+  },
+  {
+   "code": "1100",
+   "name": "Bank",
+   "type": "Asset",
+   "section": "Current assets"
+  },
+  {
+   "code": "1200",
+   "name": "Accounts Receivable",
+   "type": "Asset",
+   "section": "Current assets"
+  },
+  {
+   "code": "1300",
+   "name": "Inventory",
+   "type": "Asset",
+   "section": "Current assets"
+  },
+  {
+   "code": "1400",
+   "name": "Prepaid Expenses",
+   "type": "Asset",
+   "section": "Current assets"
+  },
+  {
+   "code": "1500",
+   "name": "Equipment",
+   "type": "Asset",
+   "section": "Non-current assets"
+  },
+  {
+   "code": "1590",
+   "name": "Accumulated Depreciation",
+   "type": "Asset",
+   "section": "Non-current assets"
+  },
+  {
+   "code": "2000",
+   "name": "Accounts Payable",
+   "type": "Liability",
+   "section": "Current liabilities"
+  },
+  {
+   "code": "2100",
+   "name": "Accrued Expenses",
+   "type": "Liability",
+   "section": "Current liabilities"
+  },
+  {
+   "code": "2200",
+   "name": "R. West",
+   "type": "Liability",
+   "section": "Current liabilities"
+  },
+  {
+   "code": "3000",
+   "name": "Owner's Capital",
+   "type": "Equity",
+   "section": "Equity"
+  },
+  {
+   "code": "3100",
+   "name": "Owner's Drawings",
+   "type": "Equity",
+   "section": "Equity"
+  },
+  {
+   "code": "3200",
+   "name": "Retained Earnings",
+   "type": "Equity",
+   "section": "Equity"
+  },
+  {
+   "code": "4000",
+   "name": "Sales Revenue",
+   "type": "Income",
+   "section": "Revenue"
+  },
+  {
+   "code": "4100",
+   "name": "Sales Return/Return Inwards",
+   "type": "Income",
+   "section": "Revenue"
+  },
+  {
+   "code": "4200",
+   "name": "Other Income",
+   "type": "Income",
+   "section": "Other income"
+  },
+  {
+   "code": "5000",
+   "name": "Cost of Goods Sold",
+   "type": "Expense",
+   "section": "Cost of sales"
+  },
+  {
+   "code": "5100",
+   "name": "Purchases",
+   "type": "Expense",
+   "section": "Cost of sales"
+  },
+  {
+   "code": "5200",
+   "name": "Rent Expense",
+   "type": "Expense",
+   "section": "Expenses"
+  },
+  {
+   "code": "5300",
+   "name": "Motor Expense",
+   "type": "Expense",
+   "section": "Expenses"
+  },
+  {
+   "code": "5400",
+   "name": "Purchases Return/Return Outwards",
+   "type": "Expense",
+   "section": "Cost of sales"
+  },
+  {
+   "code": "5500",
+   "name": "Repairs Expenses",
+   "type": "Expense",
+   "section": "Expenses"
+  },
+  {
+   "code": "2300",
+   "name": "A clicks",
+   "type": "Liability",
+   "section": "Current liabilities"
+  },
+  {
+   "code": "1210",
+   "name": "J. Simpson",
+   "type": "Asset",
+   "section": "Current assets"
+  },
+  {
+   "code": "5600",
+   "name": "Stationery",
+   "type": "Expense",
+   "section": "Expenses"
+  },
+  {
+   "code": "2400",
+   "name": "P.Luts",
+   "type": "Asset",
+   "section": "Current assets"
+  },
+  {
+   "code": "6000",
+   "name": "Motor  Vehicle",
+   "type": "Asset",
+   "section": "Non-current assets"
+  },
+  {
+   "code": "6100",
+   "name": "Fixtures",
+   "type": "Asset",
+   "section": "Non-current assets"
+  }
+ ],
+ "entries": [
+  {
+   "id": 1,
+   "date": "2023-03-01",
+   "ref": "J1",
+   "lines": [
+    {
+     "account": "Cash",
+     "desc": "Capital",
+     "dr": 1000.0,
+     "cr": 0.0
+    },
+    {
+     "account": "Owner's Capital",
+     "desc": "Cash",
+     "dr": 0.0,
+     "cr": 1000.0
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "date": "2023-03-02",
+   "ref": "J2",
+   "lines": [
+    {
+     "account": "Purchases",
+     "desc": "A clicks",
+     "dr": 296.0,
+     "cr": 0.0
+    },
+    {
+     "account": "A clicks",
+     "desc": "Purchases",
+     "dr": 0.0,
+     "cr": 296.0
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "date": "2023-03-03",
+   "ref": "J3",
+   "lines": [
+    {
+     "account": "Rent Expense",
+     "desc": "Cash",
+     "dr": 28.0,
+     "cr": 0.0
+    },
+    {
+     "account": "Cash",
+     "desc": "Rent",
+     "dr": 0.0,
+     "cr": 28.0
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "date": "2023-03-04",
+   "ref": "J4",
+   "lines": [
+    {
+     "account": "Bank",
+     "desc": "Cash",
+     "dr": 1000.0,
+     "cr": 0.0
+    },
+    {
+     "account": "Cash",
+     "desc": "Bank",
+     "dr": 0.0,
+     "cr": 1000.0
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "date": "2023-03-05",
+   "ref": "J5",
+   "lines": [
+    {
+     "account": "J. Simpson",
+     "desc": "Sales",
+     "dr": 54.0,
+     "cr": 0.0
+    },
+    {
+     "account": "Sales Revenue",
+     "desc": "J. Simpson",
+     "dr": 0.0,
+     "cr": 54.0
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "date": "2023-03-07",
+   "ref": "J6",
+   "lines": [
+    {
+     "account": "Stationery",
+     "desc": "Bank",
+     "dr": 15.0,
+     "cr": 0.0
+    },
+    {
+     "account": "Bank",
+     "desc": "Stationery",
+     "dr": 0.0,
+     "cr": 15.0
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "date": "2023-03-11",
+   "ref": "J7",
+   "lines": [
+    {
+     "account": "Cash",
+     "desc": "Sales",
+     "dr": 49.0,
+     "cr": 0.0
+    },
+    {
+     "account": "Sales Revenue",
+     "desc": "Cash",
+     "dr": 0.0,
+     "cr": 49.0
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "date": "2023-03-14",
+   "ref": "J8",
+   "lines": [
+    {
+     "account": "A clicks",
+     "desc": "Purchase return",
+     "dr": 17.0,
+     "cr": 0.0
+    },
+    {
+     "account": "Purchases Return/Return Outwards",
+     "desc": "A clicks",
+     "dr": 0.0,
+     "cr": 17.0
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "date": "2023-03-17",
+   "ref": "J9",
+   "lines": [
+    {
+     "account": "P.Luts",
+     "desc": "Sales",
+     "dr": 29.0,
+     "cr": 0.0
+    },
+    {
+     "account": "Sales Revenue",
+     "desc": "P. Luts",
+     "dr": 0.0,
+     "cr": 29.0
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "date": "2023-03-20",
+   "ref": "J10",
+   "lines": [
+    {
+     "account": "Repairs Expenses",
+     "desc": "Cash",
+     "dr": 18.0,
+     "cr": 0.0
+    },
+    {
+     "account": "Cash",
+     "desc": "Repairs",
+     "dr": 0.0,
+     "cr": 18.0
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "date": "2023-03-22",
+   "ref": "J11",
+   "lines": [
+    {
+     "account": "Sales Return/Return Inwards",
+     "desc": "J. Simpson",
+     "dr": 14.0,
+     "cr": 0.0
+    },
+    {
+     "account": "J. Simpson",
+     "desc": "Sales return",
+     "dr": 0.0,
+     "cr": 14.0
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "date": "2023-03-27",
+   "ref": "J12",
+   "lines": [
+    {
+     "account": "A clicks",
+     "desc": "Bank",
+     "dr": 279.0,
+     "cr": 0.0
+    },
+    {
+     "account": "Bank",
+     "desc": "A Clicks",
+     "dr": 0.0,
+     "cr": 279.0
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "date": "2023-03-28",
+   "ref": "J13",
+   "lines": [
+    {
+     "account": "Purchases",
+     "desc": "Cash",
+     "dr": 125.0,
+     "cr": 0.0
+    },
+    {
+     "account": "Cash",
+     "desc": "Purchases",
+     "dr": 0.0,
+     "cr": 125.0
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "date": "2023-03-29",
+   "ref": "J14",
+   "lines": [
+    {
+     "account": "Motor  Vehicle",
+     "desc": "Bank",
+     "dr": 395.0,
+     "cr": 0.0
+    },
+    {
+     "account": "Bank",
+     "desc": "motor vehicle",
+     "dr": 0.0,
+     "cr": 395.0
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "date": "2023-03-30",
+   "ref": "J15",
+   "lines": [
+    {
+     "account": "Motor Expense",
+     "desc": "Cash",
+     "dr": 15.0,
+     "cr": 0.0
+    },
+    {
+     "account": "Cash",
+     "desc": "motor expense",
+     "dr": 0.0,
+     "cr": 15.0
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "date": "2023-03-31",
+   "ref": "J16",
+   "lines": [
+    {
+     "account": "Fixtures",
+     "desc": "R. west",
+     "dr": 120.0,
+     "cr": 0.0
+    },
+    {
+     "account": "R. West",
+     "desc": "Fixtures",
+     "dr": 0.0,
+     "cr": 120.0
+    }
+   ]
+  }
+ ]
+}
