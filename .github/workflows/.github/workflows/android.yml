@@ -1,0 +1,46 @@
+name: Build Android APK
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+jobs:
+  apk:
+    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: [A, B]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "17" }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: System packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends git zip unzip autoconf automake libtool pkg-config \
+            zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev build-essential ccache
+      - name: Python tools
+        run: python -m pip install --upgrade pip "cython==0.29.36" buildozer virtualenv
+      - name: Pick the inventory version
+        run: |
+          sed -i 's/"JM_VARIANT", "A"/"JM_VARIANT", "${{ matrix.variant }}"/' variant.py
+          V=$(echo "${{ matrix.variant }}" | tr 'A-Z' 'a-z')
+          sed -i "s/^package.name = .*/package.name = jmaccounts$V/; s/^title = .*/title = JM Accounts ${{ matrix.variant }}/" buildozer.spec
+      - name: Check the accounting engine
+        run: python test_engine.py
+        env: { JM_VARIANT: "${{ matrix.variant }}" }
+      - name: Cache buildozer
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.buildozer
+            .buildozer
+          key: buildozer-${{ matrix.variant }}-${{ hashFiles('buildozer.spec') }}
+      - name: Build APK
+        run: buildozer -v android debug
+      - uses: actions/upload-artifact@v4
+        with:
+          name: JM-Accounts-${{ matrix.variant }}-apk
+          path: bin/*.apk
